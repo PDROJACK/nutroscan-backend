@@ -37,6 +37,9 @@ def detect():
         response["foodNutrients"] = data["foods"][0]["foodNutrients"]
     return response
 
+@app.route('/test', methods=['GET'])
+def test():
+    return "Wokring"
 
 @app.route('/readlabel', methods=['POST'])
 def readLabel():

@@ -35,7 +35,7 @@ def detect():
         response["foodNutrients"] = "not found"
     else:    
         response["foodNutrients"] = data["foods"][0]["foodNutrients"]
-    return response
+    return json.dumps(response)
 
 @app.route('/test', methods=['GET'])
 def test():
